@@ -1,0 +1,15 @@
+package(default_visibility = ["//visibility:public"])
+
+cc_library(
+  name = "file_helpers",
+  srcs = [
+    "file_helpers.cc",
+  ],
+  hdrs = [
+    "file_helpers.h",
+  ],
+  deps = [
+    "@abseil-cpp//absl/status",
+    "@abseil-cpp//absl/strings",
+  ],
+)
