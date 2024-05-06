@@ -1,0 +1,16 @@
+workspace(name = "absl_util")
+
+load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
+
+# Mediapip has more complete implementations of the abseil utilities, but it has more dependencies.
+# http_archive(
+#   name = "mediapipe",
+#   urls = ["https://github.com/google/mediapipe/archive/refs/heads/master.zip"],
+#   strip_prefix = "mediapipe/mediapipe-master",
+# )
+
+http_archive(
+  name = "com_google_googletest",
+  urls = ["https://github.com/google/googletest/archive/5ab508a01f9eb089207ee87fd547d290da39d015.zip"],
+  strip_prefix = "googletest-5ab508a01f9eb089207ee87fd547d290da39d015",
+)
